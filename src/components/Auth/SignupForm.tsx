@@ -41,26 +41,26 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
-      <div className="bg-white rounded-2xl shadow-xl p-8">
+    <div className="w-full max-w-md mx-auto animate-fadeInUp">
+      <div className="glass rounded-3xl p-8 hover:glass-light transition-all duration-500">
         <div className="flex items-center justify-center mb-6">
-          <div className="bg-green-100 p-3 rounded-full">
-            <UserPlus className="w-8 h-8 text-green-600" />
+          <div className="bg-gradient-to-br from-emerald-500 to-green-500 p-3 rounded-full shadow-lg shadow-emerald-500/50">
+            <UserPlus className="w-8 h-8 text-white" />
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Create Account</h2>
-        <p className="text-center text-gray-600 mb-8">Join StudentVerse today</p>
+        <h2 className="text-3xl font-bold text-center text-white mb-2">Create Account</h2>
+        <p className="text-center text-slate-400 mb-8">Join StudentVerse today</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+            <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm animate-fadeInUp">
               {error}
             </div>
           )}
 
           <div>
-            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="fullName" className="block text-sm font-medium text-slate-200 mb-2">
               Full Name *
             </label>
             <input
@@ -68,14 +68,14 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-slate-500"
               placeholder="John Doe"
               disabled={loading}
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
               Email Address *
             </label>
             <input
@@ -83,14 +83,14 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-slate-500"
               placeholder="you@example.com"
               disabled={loading}
             />
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="password" className="block text-sm font-medium text-slate-200 mb-2">
               Password *
             </label>
             <input
@@ -98,7 +98,7 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-slate-500"
               placeholder="Minimum 6 characters"
               disabled={loading}
             />
@@ -106,14 +106,14 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label htmlFor="branch" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="branch" className="block text-sm font-medium text-slate-200 mb-2">
                 Branch
               </label>
               <select
                 id="branch"
                 value={branch}
                 onChange={(e) => setBranch(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white"
                 disabled={loading}
               >
                 <option value="">Select Branch</option>
@@ -124,14 +124,14 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
             </div>
 
             <div>
-              <label htmlFor="semester" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="semester" className="block text-sm font-medium text-slate-200 mb-2">
                 Semester
               </label>
               <select
                 id="semester"
                 value={semester}
                 onChange={(e) => setSemester(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white"
                 disabled={loading}
               >
                 <option value="">Select</option>
@@ -145,18 +145,18 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-gradient-to-r from-emerald-400 to-green-500 hover:shadow-2xl hover:shadow-emerald-500/50 text-white font-semibold py-3 px-4 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
           >
             {loading ? 'Creating account...' : 'Create Account'}
           </button>
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-gray-600">
+          <p className="text-slate-400">
             Already have an account?{' '}
             <button
               onClick={onToggle}
-              className="text-green-600 hover:text-green-700 font-semibold"
+              className="text-emerald-400 hover:text-emerald-300 font-semibold"
             >
               Sign In
             </button>
