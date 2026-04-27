@@ -30,7 +30,7 @@ export function AddTestForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const topics = ['Arrays', 'Strings', 'Linked Lists', 'Trees', 'Graphs', 'Dynamic Programming', 'Sorting', 'Searching', 'Other'];
+  const topics = ['Arrays', 'Strings', 'Linked Lists', 'Trees', 'Graphs', 'Dynamic Programming', 'Sorting', 'Searching', 'Computer Science Fundamentals', 'System Design', 'Databases', 'Networking', 'Operating Systems', 'Concurrency', 'Security','React', 'Node.js', 'Python', 'Java', 'C++', 'JavaScript', 'TypeScript','OOPS', 'Functional Programming', 'Design Patterns', 'Testing', 'DevOps', 'Cloud Computing', 'AI/ML', 'Data Science', 'Other'];
 
   const addQuestion = () => {
     if (currentQuestion.question_text && currentQuestion.correct_answer && currentQuestion.topic) {
