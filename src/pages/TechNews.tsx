@@ -88,7 +88,7 @@ export function TechNews() {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center space-x-3 mb-8">
         <Newspaper className="w-10 h-10 text-red-600" />
-        <h1 className="text-4xl font-bold text-gray-900">Tech News</h1>
+        <h1 className="text-4xl font-bold text-white-900">Tech News</h1>
       </div>
 
       <div className="mb-8">

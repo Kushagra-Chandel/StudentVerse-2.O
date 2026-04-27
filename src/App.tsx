@@ -20,7 +20,7 @@ function AuthScreen() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 flex items-center justify-center p-4">
       {isLogin ? (
         <LoginForm onToggle={() => setIsLogin(false)} />
       ) : (
@@ -32,7 +32,7 @@ function AuthScreen() {
 
 function LandingScreen({ onGetStarted }: { onGetStarted: () => void }) {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-slate-700">
       <Hero onGetStarted={onGetStarted} />
       <Features />
       <Stats />
@@ -47,7 +47,7 @@ function MainApp() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-slate-700 flex items-center justify-center">
         <div className="flex flex-col items-center space-y-4">
           <div className="w-12 h-12 border-4 border-slate-700 border-t-cyan-400 rounded-full animate-rotate" />
           <p className="text-slate-400 text-lg">Loading your learning universe...</p>
@@ -65,7 +65,7 @@ function MainApp() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-600 via-slate-700 to-slate-600">
       <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
 
       <main className="pt-16">

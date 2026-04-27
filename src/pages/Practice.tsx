@@ -223,7 +223,7 @@ export function Practice() {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center space-x-3 mb-8">
         <Code className="w-10 h-10 text-green-600" />
-        <h1 className="text-4xl font-bold text-gray-900">Practice Questions</h1>
+        <h1 className="text-4xl font-bold text-white">Practice Questions</h1>
       </div>
 
       <div className="bg-white rounded-xl shadow-md p-6 mb-8">

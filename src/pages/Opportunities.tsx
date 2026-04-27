@@ -98,7 +98,7 @@ export function Opportunities() {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center space-x-3 mb-8">
         <Briefcase className="w-10 h-10 text-purple-600" />
-        <h1 className="text-4xl font-bold text-gray-900">Opportunities</h1>
+        <h1 className="text-4xl font-bold text-white-900">Opportunities</h1>
       </div>
 
       <div className="mb-8">

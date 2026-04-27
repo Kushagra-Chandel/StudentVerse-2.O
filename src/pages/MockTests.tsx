@@ -146,7 +146,7 @@ export function MockTests() {
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center space-x-3 mb-8">
         <Trophy className="w-10 h-10 text-orange-600" />
-        <h1 className="text-4xl font-bold text-gray-900">Mock Tests</h1>
+        <h1 className="text-4xl font-bold text-white-900">Mock Tests</h1>
       </div>
 
       {tests.length === 0 ? (

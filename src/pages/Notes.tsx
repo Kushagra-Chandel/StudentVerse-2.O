@@ -110,8 +110,8 @@ export function Notes() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex items-center space-x-3 mb-8">
-        <BookOpen className="w-10 h-10 text-blue-600" />
-        <h1 className="text-4xl font-bold text-gray-900">Study Notes</h1>
+        <BookOpen className="w-10 h-10 text-white-600" />
+        <h1 className="text-4xl font-bold text-white">Study Notes</h1>
       </div>
 
       <div className="bg-white rounded-xl shadow-md p-6 mb-8">
