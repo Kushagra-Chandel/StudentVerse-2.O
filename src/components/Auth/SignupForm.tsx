@@ -68,7 +68,7 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-slate-500"
+             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-gray-300"
               placeholder="John Doe"
               disabled={loading}
             />
@@ -83,7 +83,7 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-slate-500"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-gray-300"
               placeholder="you@example.com"
               disabled={loading}
             />
@@ -98,7 +98,7 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-slate-500"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white placeholder-white/70"
               placeholder="Minimum 6 characters"
               disabled={loading}
             />
@@ -109,18 +109,21 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
               <label htmlFor="branch" className="block text-sm font-medium text-slate-200 mb-2">
                 Branch
               </label>
-              <select
-                id="branch"
-                value={branch}
-                onChange={(e) => setBranch(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white"
-                disabled={loading}
-              >
-                <option value="">Select Branch</option>
-                {branches.map((b) => (
-                  <option key={b} value={b}>{b}</option>
-                ))}
-              </select>
+             <select
+  id="branch"
+  value={branch}
+  onChange={(e) => setBranch(e.target.value)}
+  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white"
+  disabled={loading}
+>
+  <option value="" className="text-black bg-white">Select Branch</option>
+
+  {branches.map((b) => (
+    <option key={b} value={b} className="text-black bg-white">
+      {b}
+    </option>
+  ))}
+</select>
             </div>
 
             <div>
@@ -128,17 +131,20 @@ export function SignupForm({ onToggle }: { onToggle: () => void }) {
                 Semester
               </label>
               <select
-                id="semester"
-                value={semester}
-                onChange={(e) => setSemester(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white"
-                disabled={loading}
-              >
-                <option value="">Select</option>
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((s) => (
-                  <option key={s} value={s}>{s}</option>
-                ))}
-              </select>
+  id="semester"
+  value={semester}
+  onChange={(e) => setSemester(e.target.value)}
+  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition text-white"
+  disabled={loading}
+>
+  <option value="" className="text-black bg-white">Select</option>
+
+  {[1, 2, 3, 4, 5, 6, 7, 8].map((s) => (
+    <option key={s} value={s} className="text-black bg-white">
+      {s}
+    </option>
+  ))}
+</select>
             </div>
           </div>
 

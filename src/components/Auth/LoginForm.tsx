@@ -56,7 +56,7 @@ export function LoginForm({ onToggle }: { onToggle: () => void }) {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition text-white placeholder-slate-500"
+              className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition text-black placeholder-gray-400"
               placeholder="you@example.com"
               disabled={loading}
             />
@@ -71,7 +71,7 @@ export function LoginForm({ onToggle }: { onToggle: () => void }) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition text-white placeholder-slate-500"
+              className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-white focus:border-transparent transition text-black placeholder-gray-400"
               placeholder="Enter your password"
               disabled={loading}
             />
